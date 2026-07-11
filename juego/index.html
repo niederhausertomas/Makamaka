@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CLUBH▲US - AMIGOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ACHOS + MICHAEL DURKEE" />
+
+    <link rel="stylesheet" href="css/clubhausstyles.css">
+    <!--  <link rel="stylesheet" type="text/css" href="css/examples.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/hamburgers.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/favicon/favicon-ch-150x150.png" sizes="32x32">
+    <link rel="icon" href="img/favicon/favicon-ch-300x300.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-ch-300x300.png">
+    <meta name="msapplication-TileImage" content="img/favicon/favicon-ch-300x300.png">
+
+</head>
+
+<body>
+
+    <!--CSS Preloader -->
+    <div class="preloader-wrapper">
+        <div class="preloader">
+
+            <div id="loading">
+                <img style="width: 200px" src="img/makamaka.png">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Top Navigation bar -->
+
+    <div class="showroom-window_close invert">
+        <a href="index.html"> <img class="escape" src="img/exit.svg"> </a>
+    </div>
+
+    <div class="screen_container">
+
+        <div id="screen_2" class="screenview regrets" onclick="screen2()">
+            <div class="inner">
+                <h2 style="text-transform: uppercase;">Choose Wisely</h2>
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+        <div id="screen_3" class="screenview" onclick="screen3()">
+            <div class="inner">
+                <h2 class="big-text">Hey honey bunny! Our bowls are fucking healthy but...</h2>
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+        <div id="screen_4" class="screenview">
+            <div class="inner">
+                <h2>What is the record for burgers eaten in one minute?</h2>
+                <button class="wrong" onclick="screen4b()">3</button>
+                <button class="correct" onclick="screen4a()">5</button>
+                <button class="wrong" onclick="screen4b()">108</button>
+            </div>
+        </div>
+        <div id="screen_5" class="screenview drunkkaraoke" onclick="screen5()">
+            <div class="inner">
+                <h2 class="big-text">fuck yes!</h2>
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+        <div id="screen_6" class="screenview drunkkaraoke">
+            <div class="inner">
+                <!-- <h2 class="big-text">you fail</h2> -->
+                <button onclick="restart2()">Try again?</button>
+            </div>
+            <!-- <h4 class="blinky">Click anywhere to continue</h4> -->
+        </div>
+        <div id="screen_7" class="screenview" onclick="screen7()">
+            <div class="inner">
+                <h2 class="big-text">Look who's coming through the Makamaka door...</h2>
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+        <div id="screen_8" class="screenview">
+            <div class="inner">
+                <h2>Which celebrities have frequently visited Makamaka to enjoy our Bad Ass Burger?</h2>
+                <button class="wrong" onclick="screen8b()">Bill Murray</button>
+                <button class="wrong" onclick="screen8b()">Samuel L. Jackson</button>
+                <button class="correct" onclick="screen8a()">Shakira</button>
+            </div>
+        </div>
+        <div id="screen_9" class="screenview friend" onclick="screen9()">
+            <div class="inner">
+                <h2>¡ÉXITO!</h2>
+
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+        <div id="screen_10" class="screenview">
+            <div class="inner">
+                <h2 class="big-text">Go Home, We Don't Want you!</h2>
+                <button onclick="restart2()">Try again?</button>
+            </div>
+        </div>
+
+        <!--
+
+        <div id="screen_11" class="screenview">
+            <div class="inner">
+                <h2 class="big-text">What do you see?</h2>
+                <button class="extra correct" onclick="screen11a()">Homo sapiens suck</button>
+                <button class="extra wrong" onclick="screen11b()">Time for a new six-pack</button>
+            </div>
+        </div>
+
+        <div id="screen_12" class="screenview" onclick="screen12()">
+            <div class="inner">
+                <h2 class="big-text">Respect.</h2>
+
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+
+        <div id="screen_13" class="screenview">
+            <div class="inner">
+                <h2 class="big-text">You suck, go home!</h2>
+                <button onclick="restart2()">Try again?</button>
+            </div>
+        </div>
+
+        <div id="screen_14" class="screenview" onclick="screen14()">
+            <div class="inner">
+                <h2 class="big-text">Be honest,</h2>
+            </div>
+            <h4 class="blinky">Click anywhere to continue</h4>
+        </div>
+
+        <div id="screen_15" class="screenview">
+            <div class="inner">
+                <h2 class="big-text correct">Are you drunk?</h2>
+                <button class="correct winner" onclick="screen15b()">yes</button>
+                <button class="drunk">no</button>
+            </div>
+        </div>
+
+        -->
+
+        <div id="screen_16" class="screenview" onclick="screen16()">
+            <div class="inner">
+                <h2 class="big-text">You are close to be a Makamaka friend!</h2>
+
+                <a href="https://portal.cheerfy.com?portal_id=0059ac019fac4a3a9872896f3c847571" target="blank">
+                    <button>Sign Up Here</button>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div id="screen_17" class="screenview">
+            <div class="inner">
+                <h2>You suck, go home</h2>
+                <button onclick="restart()">Try again? nerd.</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--
+    <audio id="audio1" src="../mp3/amigos.mp3" autostart="false"></audio>
+    <audio id="audio2" src="../mp3/amigos.mp3"></audio>
+    -->
+
+    <audio id="audio2" src="mp3/correct.mp3" autostart="false" ></audio>
+    <audio id="audio3" src="mp3/wrong.mp3" autostart="false" ></audio>
+    <audio id="audio4" src="mp3/playa.mp3" autostart="false" ></audio>
+    <audio id="audio5" src="mp3/paparazzi.mp3" autostart="false" ></audio>
+    <audio id="audio6" src="mp3/winner.mp3" autostart="false" ></audio>
+    <audio id="audio7" src="mp3/win.mp3" autostart="false" ></audio>
+
+    <script src="js/clubhausscripts.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script type="text/javascript">
+        var sound1 = document.getElementById("audio1");
+        // sound.play();
+
+        $('.click1').click(function(e){
+          e.preventDefault();
+          sound1.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var sound2 = document.getElementById("audio2");
+        // sound.play();
+
+        $('.correct').click(function(e){
+          e.preventDefault();
+          sound2.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var sound3 = document.getElementById("audio3");
+        // sound.play();
+
+        $('.wrong').click(function(e){
+          e.preventDefault();
+          sound3.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var regrets = document.getElementById("audio4");
+        // sound.play();
+
+        $('.regrets').click(function(e){
+          e.preventDefault();
+          regrets.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var drunkkaraoke = document.getElementById("audio5");
+        // sound.play();
+
+        $('.drunkkaraoke').click(function(e){
+          e.preventDefault();
+          drunkkaraoke.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var winner = document.getElementById("audio6");
+        // sound.play();
+
+        $('.winner').click(function(e){
+          e.preventDefault();
+          winner.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var friend = document.getElementById("audio7");
+        // sound.play();
+
+        $('.friend').click(function(e){
+          e.preventDefault();
+          friend.play();
+        });
+    </script>
+
+    <!-- el sonido 2 borra el 1
+    <script type="text/javascript">
+        var sound1 = document.getElementById("audio1");
+        // sound.play();
+
+        $('.click1').click(function(e){
+          e.preventDefault();
+          sound1.play();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var sound2 = document.getElementById("audio2");
+        // sound.play();
+
+        $('.click2').click(function(e){
+          e.preventDefault();
+          sound1.pause();
+          sound2.play();
+        });
+    </script>
+    -->
+
+    <!--
+    <script>
+        $(document).ready(function() {
+            //Preloader
+            $(window).on("load", function() {
+                preloaderFadeOutTime = 300;
+
+                function hidePreloader() {
+                    var preloader = $('.preloader-wrapper');
+                    preloader.delay(300).fadeOut(preloaderFadeOutTime);
+                }
+                hidePreloader();
+            });
+        });
+        /* $('.preloader-wrapper').delay(1000).fadeOut('slow'); */
+    </script>
+    -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /* precarga */
+                $(".preloader-wrapper").delay(300).fadeOut("slow");
+        })
+    </script>
+
+    <script>
+        $('.drunk').mouseover(function() {
+            $('.drunk').addClass('drunk-ani');
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 200) {
+                $('.logo').css({
+                    'height': '50'
+                });
+            } else {
+                $('.logo').css({
+                    'height': '100'
+                });
+            }
+
+        });
+    </script>
+
+</body>
+</html>
