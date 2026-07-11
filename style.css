@@ -5,21 +5,21 @@
 /* ── FONTS ── */
 @font-face {
   font-family: 'baskerville';
-  src: url('/assets/fonts/baskerville-semibold.woff2') format('woff2');
+  src: url('assets/fonts/baskerville-semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ITCC';
-  src: url('/assets/fonts/itc-avant-garde-gothic-bold-condensed.woff2') format('woff2');
+  src: url('assets/fonts/itc-avant-garde-gothic-bold-condensed.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ITC';
-  src: url('/assets/fonts/itc-avant-garde-gothic-bold.woff2') format('woff2');
+  src: url('assets/fonts/itc-avant-garde-gothic-bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -59,7 +59,7 @@ a {
 
 /* ── CUSTOM CURSORS ── */
 body, span {
-  cursor: url('/assets/images/cursor-hand-small.png') 16 0, auto;
+  cursor: url('assets/images/cursor-hand-small.png') 16 0, auto;
 }
 a,
 button,
@@ -71,11 +71,11 @@ textarea,
 label,
 [role="button"],
 .clickable {
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, auto;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, auto;
 }
 .grab,
 [draggable="true"] {
-  cursor: url('/assets/images/cursor-grab.png') 16 0, grab;
+  cursor: url('assets/images/cursor-grab.png') 16 0, grab;
 }
 
 /* ── ACCESSIBILITY ── */
@@ -201,7 +201,7 @@ label,
 .off-canvas-content {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/images/off-canvas-background.gif');
+  background-image: url('assets/images/off-canvas-background.gif');
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +222,7 @@ label,
   right: 50px;
   background: none;
   border: none;
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, pointer;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, pointer;
   z-index: 10;
 }
 .off-canvas-close svg {
@@ -293,7 +293,7 @@ label,
   position: fixed;
   z-index: 99999;
   inset: 0;
-  background-image: url('/assets/images/welcome-background.jpg');
+  background-image: url('assets/images/welcome-background.jpg');
   background-size: cover;
   background-position: center;
   display: none;
@@ -337,7 +337,7 @@ label,
   border-radius: 8px;
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   font-family: 'baskerville', sans-serif;
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, pointer;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, pointer;
 }
 .welcome-buttons button:hover {
   background: #ddd;
@@ -361,7 +361,7 @@ label,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/assets/images/hero-banner.jpg');
+  background-image: url('assets/images/hero-banner.jpg');
   background-position: center center;
   background-size: cover;
   margin-top: -180px;
@@ -403,7 +403,7 @@ label,
   color: white;
   -webkit-text-stroke: 2.5px black;
   transition: opacity 0.3s ease;
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, pointer;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, pointer;
 }
 .words-grid:hover .word-item { opacity: 0.3; }
 .word-item:hover { opacity: 1 !important; }
@@ -421,10 +421,10 @@ label,
   overflow: hidden;
 }
 .tira-01 {
-  background-image: url('/assets/images/paper-strip-1.png');
+  background-image: url('assets/images/paper-strip-1.png');
 }
 .tira-02 {
-  background-image: url('/assets/images/paper-strip-2.png');
+  background-image: url('assets/images/paper-strip-2.png');
 }
 .marquee-strip-center {
   justify-content: center;
@@ -761,7 +761,7 @@ label,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/assets/images/friends-section-background.jpg');
+  background-image: url('assets/images/friends-section-background.jpg');
   background-position: bottom center;
   background-size: cover;
   padding: 0;
@@ -772,7 +772,7 @@ label,
   font-weight: 600;
   color: #000;
   text-align: center;
-  background-image: url('/assets/images/texture-background.jpg');
+  background-image: url('assets/images/texture-background.jpg');
   background-position: center center;
   background-size: 100% auto;
   padding: 0;
@@ -826,7 +826,7 @@ label,
   background-color: #111;
   color: white;
   border: none;
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, pointer;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, pointer;
   transition: background 0.3s ease;
   font-family: 'ITC', sans-serif;
 }
@@ -853,7 +853,7 @@ label,
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, pointer;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, pointer;
   z-index: 100;
 }
 
@@ -862,10 +862,10 @@ label,
   position: relative;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  background-image: url('/assets/images/tape-deck-background.png');
+  background-image: url('assets/images/tape-deck-background.png');
   background-position: center center;
   background-size: cover;
-  cursor: url('/assets/images/cursor-grab.png') 16 0, grab;
+  cursor: url('assets/images/cursor-grab.png') 16 0, grab;
 }
 .playlist-tag {
   position: absolute;
@@ -981,7 +981,7 @@ label,
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url('/assets/images/map-desktop.png');
+  background-image: url('assets/images/map-desktop.png');
   background-position: center center;
   background-size: cover;
   z-index: 7;
@@ -1186,7 +1186,7 @@ body.has-sticky-cta { padding-bottom: 52px; }
   border: none;
   color: white;
   font-size: 2rem;
-  cursor: url('/assets/images/cursor-hand-black.png') 16 0, pointer;
+  cursor: url('assets/images/cursor-hand-black.png') 16 0, pointer;
   line-height: 1;
 }
 
@@ -1245,7 +1245,7 @@ body.has-sticky-cta { padding-bottom: 52px; }
   .section-gallery { flex-direction: column-reverse; }
 
   .section-map {
-    background-image: url('/assets/images/map-mobile.jpg');
+    background-image: url('assets/images/map-mobile.jpg');
     background-size: cover;
   }
 
