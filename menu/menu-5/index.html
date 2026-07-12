@@ -89,48 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".elementor-element-7f98cd4") || document.querySelector(".elementor-element.elementor-element-6e6d74b");
-
-  // Guarda el fondo original
-  const originalBg = window.getComputedStyle(container).backgroundImage;
-
-  document.querySelectorAll(".jwWTyM").forEach(span => {
-    span.addEventListener("mouseenter", () => {
-      const newBg = span.getAttribute("data-bg");
-      container.style.backgroundImage = `url(${newBg})`;
-      container.style.backgroundSize = "cover";
-      container.style.backgroundPosition = "center";
-    });
-
-    span.addEventListener("mouseleave", () => {
-      container.style.backgroundImage = originalBg;
-    });
-  });
-});
-</script>
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-  const imagenHover = document.getElementById('imagenHover');
-  const zonaLupa = document.getElementById('zonaLupa');
-
-  zonaLupa.addEventListener('mousemove', (e) => {
-    const rect = zonaLupa.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    imagenHover.style.clipPath = `circle(100px at ${x}px ${y}px)`;
-  });
-
-  zonaLupa.addEventListener('mouseleave', () => {
-    imagenHover.style.clipPath = `circle(0px at 0 0)`;
-  });
-		  });
-</script>
 <!-- Preload de fuentes personalizadas -->
-<link rel="preload" href="https://makamaka.es/wp-content/uploads/2025/05/Baskerville-SemiBold.0e9d78b5277a93a978d3.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://makamaka.es/wp-content/uploads/2025/05/itc-avant-garde-gothic-std-bold-condensed-5895705e8fe31.77397177e5e321e7cd3b.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://makamaka.es/wp-content/uploads/2025/05/itc-avant-garde-gothic-std-bold-589572c7e9955.d5235f7687b5470f8656.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/baskerville-semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/itc-avant-garde-gothic-bold-condensed.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/itc-avant-garde-gothic-bold.woff2" as="font" type="font/woff2" crossorigin>
 
 			<style>
 				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
@@ -150,14 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
 					}
 				}
 			</style>
-			<link rel="icon" href="https://makamaka.es/wp-content/uploads/2025/07/MM-logo-favicon-150x150.png" sizes="32x32" />
-<link rel="icon" href="https://makamaka.es/wp-content/uploads/2025/07/MM-logo-favicon-300x300.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://makamaka.es/wp-content/uploads/2025/07/MM-logo-favicon-300x300.png" />
-<meta name="msapplication-TileImage" content="https://makamaka.es/wp-content/uploads/2025/07/MM-logo-favicon-300x300.png" />
+			<link rel="icon" href="../../assets/images/favicon-150.png" sizes="32x32" />
+<link rel="icon" href="../../assets/images/favicon-300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../assets/images/favicon-300.png" />
+<meta name="msapplication-TileImage" content="../../assets/images/favicon-300.png" />
 		<style id="wp-custom-css">
 			/* Cursor por defecto: mano blanca */
 body, span {
-  cursor: url('https://makamaka.es/wp-content/uploads/2025/05/hand_small.d0e91f45d3f79533913c.png') 16 0, auto !Important;
+  cursor: url('../../assets/images/cursor-hand-small.png') 16 0, auto !Important;
 }
 
 /* Cursor negro para elementos interactivos */
@@ -171,24 +133,24 @@ textarea,
 label,
 [role="button"],
 .clickable {
-  cursor: url('https://makamaka.es/wp-content/uploads/2025/05/hand_black.cdabe9e31e9c5ffd0303.png') 16 0, auto!Important;
+  cursor: url('../../assets/images/cursor-hand-black.png') 16 0, auto!Important;
 }
 
 /* Cursor "grab" personalizado */
 .grab,
 [draggable="true"] {
-  cursor: url('https://makamaka.es/wp-content/uploads/2025/06/descarga-1.png') 16 0, grab!Important;
+  cursor: url('../../assets/images/cursor-grab.png') 16 0, grab!Important;
 }
 
 /* Cursor "grabbing" mientras se arrastra */
 .grabbing,
 .dragging {
-  cursor: url('https://makamaka.es/wp-content/uploads/2025/06/descarga-1.png') 16 0, grabbing!Important;
+  cursor: url('../../assets/images/cursor-grab.png') 16 0, grabbing!Important;
 }
 /* Fuente: Baskerville SemiBold */
 @font-face {
   font-family: 'baskerville';
-  src: url('https://makamaka.es/wp-content/uploads/2025/05/Baskerville-SemiBold.0e9d78b5277a93a978d3.woff2') format('woff2');
+  src: url('../../assets/fonts/baskerville-semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -197,7 +159,7 @@ label,
 /* Fuente: ITC Avant Garde Gothic Std Bold Condensed */
 @font-face {
   font-family: 'ITCC';
-  src: url('https://makamaka.es/wp-content/uploads/2025/05/itc-avant-garde-gothic-std-bold-condensed-5895705e8fe31.77397177e5e321e7cd3b.woff2') format('woff2');
+  src: url('../../assets/fonts/itc-avant-garde-gothic-bold-condensed.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -206,7 +168,7 @@ label,
 /* Fuente: ITC Avant Garde Gothic Std Bold */
 @font-face {
   font-family: 'ITC';
-  src: url('https://makamaka.es/wp-content/uploads/2025/05/itc-avant-garde-gothic-std-bold-589572c7e9955.d5235f7687b5470f8656.woff2') format('woff2');
+  src: url('../../assets/fonts/itc-avant-garde-gothic-bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -334,57 +296,6 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/makamaka.es\/wp-admin\/ad
       });
     });
   });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const seccion = document.querySelector(".elementor-element-b67f22f");
-
-    seccion.addEventListener("mousemove", function (e) {
-      const rect = seccion.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-
-      // Cambiar background según el lado
-      if (x < rect.width / 2) {
-        seccion.style.backgroundImage =
-          "url('https://makamaka.es/wp-content/uploads/2025/05/fb_drink.jpg')";
-      } else {
-        seccion.style.backgroundImage =
-          "url('https://makamaka.es/wp-content/uploads/2025/05/fb_burger.jpg')";
-      }
-    });
-
-    seccion.addEventListener("click", function (e) {
-      const rect = seccion.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-
-      // Redirigir según la mitad
-      if (x < rect.width / 2) {
-        window.location.href = "http://makamakamenu.es/menu/drink/";
-      } else {
-        window.location.href = "http://makamakamenu.es/menu/food/";
-      }
-    });
-  });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const btnJugar = document.getElementById('btn-jugar');
-  const contenedorInfo = document.getElementById('contenedor-info');
-  const contenedorJuego = document.getElementById('contenedor-juego');
-  const btnCerrar = document.getElementById('btn-cerrar');
-
-  btnJugar.addEventListener('click', function () {
-    contenedorInfo.style.display = 'none';
-    contenedorJuego.style.display = 'block';
-  });
-
-  btnCerrar.addEventListener('click', function () {
-    contenedorJuego.style.display = 'none';
-    contenedorInfo.style.display = 'block';
-  });
-});
 </script>
 
 	</body>
