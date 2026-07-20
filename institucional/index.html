@@ -12,7 +12,6 @@
   <link rel="icon" href="../assets/images/favicon-300.png" sizes="192x192">
   <link rel="apple-touch-icon" href="../assets/images/favicon-300.png">
 
-  <link rel="stylesheet" href="../assets/fonts/cormorant-garamond.css">
   <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -26,17 +25,18 @@
     <div class="header-inner">
       <div class="header-left">
         <a href="../" class="header-logo-link" aria-label="Makamaka Beach Burger Café – Inicio">
-          <img src="../assets/images/logo-white.png" alt="Makamaka Beach Burger Café" class="invert">
-        </a>
-        <a href="../menu/menu-5/" class="header-nav-btn desktop-only" aria-label="Ver carta / menú">
-          <img src="../assets/images/button-menu.png" alt="Ver carta / menú">
-        </a>
-        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="header-nav-btn desktop-only" aria-label="Reservar mesa">
-          <img src="../assets/images/button-reservas.png" alt="Reservar mesa">
+          <img src="../assets/images/logo-white.png" alt="Makamaka Beach Burger Café">
         </a>
       </div>
+      <nav class="header-nav desktop-only" aria-label="Navegación principal">
+        <a href="../menu/menu-5/" class="header-nav-btn">Carta</a>
+        <a href="../#grupos" class="header-nav-btn">Grupos</a>
+        <a href="../maka-friends/index.html" class="header-nav-btn">Maka Friends</a>
+        <a href="https://maps.app.goo.gl/va5jCDSNcbdHHJvQ6" target="_blank" rel="noopener" class="header-nav-btn">Dónde Estamos</a>
+        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="header-nav-btn is-primary">Reservar</a>
+      </nav>
       <a href="#" id="open-menu" class="hamburger-btn" aria-label="Abrir menú" aria-controls="off-canvas-menu" aria-expanded="false">
-        <img src="../assets/images/icon-hamburger-menu.png" alt="" class="invert">
+        <span></span><span></span><span></span>
       </a>
     </div>
   </header>
@@ -51,27 +51,19 @@
         </svg>
       </button>
 
-      <a href="../#menu" class="off-canvas-item">
-        <img src="../assets/images/icon-menu.png" alt="Menú" class="menu-anim">
-      </a>
-      <a href="../juego/index.html" class="off-canvas-item other-item">
-        <img src="../assets/images/icon-friends.png" alt="Friends & Events">
-      </a>
-      <a href="#" class="off-canvas-item where-item">
-        <img src="../assets/images/icon-where.png" alt="Dónde estamos" class="where-anim">
-      </a>
-      <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener" class="off-canvas-item other-item">
-        <img src="../assets/images/icon-family.png" alt="Únete a la familia">
-      </a>
-      <a href="#" id="open-video" class="off-canvas-item other-item">
-        <img src="../assets/images/icon-camera.png" alt="Ver vídeo">
-      </a>
+      <nav class="off-canvas-nav" aria-label="Menú principal">
+        <a href="../menu/menu-5/" class="off-canvas-link">Carta</a>
+        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="off-canvas-link">Reservar</a>
+        <a href="../#grupos" class="off-canvas-link">Grupos</a>
+        <a href="../maka-friends/index.html" class="off-canvas-link">Maka Friends</a>
+        <a href="https://maps.app.goo.gl/va5jCDSNcbdHHJvQ6" target="_blank" rel="noopener" class="off-canvas-link">Dónde Estamos</a>
+      </nav>
 
       <nav class="off-canvas-textlinks" aria-label="Más secciones">
-        <a href="../#grupos" class="off-canvas-textlink">Grupos</a>
-        <a href="../maka-friends/index.html" class="off-canvas-textlink">Maka Friends</a>
-        <a href="../maka-friends/index.html#blog" class="off-canvas-textlink">Blog</a>
         <a href="../institucional/index.html" class="off-canvas-textlink">Institucional</a>
+        <a href="../juego/index.html" class="off-canvas-textlink">Jugar</a>
+        <a href="#" id="open-video" class="off-canvas-textlink">Ver vídeo</a>
+        <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener" class="off-canvas-textlink">Únete al equipo</a>
         <a href="https://glovoapp.com/es/es/barcelona/" target="_blank" rel="noopener" class="off-canvas-textlink">Order Now</a>
         <span class="off-canvas-textlink is-disabled" aria-disabled="true">Shop (próximamente)</span>
       </nav>
@@ -133,71 +125,72 @@
 
   <!-- ── FOOTER ── -->
   <footer class="site-footer" id="footer" role="contentinfo">
-    <div class="footer-logo-col">
-      <img src="../assets/images/logo-mobile.png" alt="Makamaka Beach Burger Café" width="255" height="284">
-      <p class="footer-tagline">Healthy Restaurant · Beach Bar · Burgers · Bowls · Smoothies · Cocktails</p>
+
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="../assets/images/logo-mobile.png" alt="Makamaka Beach Burger Café" class="footer-logo" width="255" height="284">
+        <p class="footer-tagline">Healthy Restaurant · Beach Bar · Burgers · Bowls · Smoothies · Cocktails</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/MakamakaBcn" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="../assets/images/icon-facebook.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/makamakabcn/?hl=es" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="../assets/images/icon-instagram.png" alt="">
+          </a>
+          <a href="https://www.pinterest.es/makamakabarcelona/" target="_blank" rel="noopener" aria-label="Pinterest">
+            <img src="../assets/images/icon-pinterest.png" alt="">
+          </a>
+          <a href="https://tiktok.com/@makamakabcn" target="_blank" rel="noopener" aria-label="TikTok">
+            <img src="../assets/images/icon-tiktok.png" alt="">
+          </a>
+        </div>
+      </div>
+
+      <!-- Sitemap -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Sitio</h3>
+        <nav class="footer-links" aria-label="Enlaces del footer">
+          <a href="../menu/menu-5/">Carta</a>
+          <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish">Reservas</a>
+          <a href="../#grupos">Grupos &amp; Eventos</a>
+          <a href="../maka-friends/index.html">Maka Friends</a>
+          <a href="../institucional/index.html">Institucional</a>
+        </nav>
+      </div>
+
+      <!-- Visit -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Visitanos</h3>
+        <address class="footer-address">Pg. de Joan de Borbó 76,<br>08039 Barcelona</address>
+        <p class="footer-hours">
+          Lu-Ju: 12:00 – 24:00h<br>
+          Vi-Sab: 12:00 – 1:00h<br>
+          Dom: 11:00 – 24:00h
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Contacto</h3>
+        <a href="mailto:hola@makamaka.es" class="footer-contact-link">hola@makamaka.es</a>
+        <a href="tel:+34644121335" class="footer-contact-link">+34 644 121 335</a>
+        <nav class="footer-links" aria-label="Más enlaces">
+          <a href="../assets/docs/menu-grupos-2026-summer.pdf" target="_blank" rel="noopener">Menú para grupos</a>
+          <a href="mailto:hola@makamaka.es?subject=Consulta%20de%20prensa">Sala de prensa</a>
+          <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener">Trabajá con nosotros</a>
+        </nav>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <h2 class="footer-heading">WHERE WE ARE?</h2>
-      <address class="footer-address" style="font-style:normal;">
-        <strong>Pg. de Joan de Borbó 76,<br>08039 Barcelona</strong>
-      </address>
-      <p class="footer-hours">
-        <b>Lu-Ju:</b> 12:00 – 24:00h<br>
-        <b>Vi-Sab:</b> 12:00 – 1:00h<br>
-        <b>Dom:</b> 11:00 – 24:00h
-      </p>
-    </div>
-
-    <div class="footer-col">
-      <h2 class="footer-heading">FOLLOW</h2>
-      <div class="social-link">
-        <a href="https://www.facebook.com/MakamakaBcn" target="_blank" rel="noopener">
-          <img src="../assets/images/icon-facebook.png" alt="Facebook" width="30"> Facebook
-        </a>
-      </div>
-      <div class="social-link">
-        <a href="https://www.instagram.com/makamakabcn/?hl=es" target="_blank" rel="noopener">
-          <img src="../assets/images/icon-instagram.png" alt="Instagram" width="30"> Instagram
-        </a>
-      </div>
-      <div class="social-link">
-        <a href="https://www.pinterest.es/makamakabarcelona/" target="_blank" rel="noopener">
-          <img src="../assets/images/icon-pinterest.png" alt="Pinterest" width="30"> Pinterest
-        </a>
-      </div>
-      <div class="social-link">
-        <a href="https://tiktok.com/@makamakabcn" target="_blank" rel="noopener">
-          <img src="../assets/images/icon-tiktok.png" alt="TikTok" width="30"> Tiktok
-        </a>
-      </div>
-    </div>
-
-    <div class="footer-col">
-      <h2 class="footer-heading">CONTACT</h2>
-      <div class="contact-item">
-        <img src="../assets/images/icon-mail.png" alt="" width="30"> hola@makamaka.es
-      </div>
-      <div class="contact-item">
-        <img src="../assets/images/icon-phone.png" alt="" width="30"> +34 644 121 335
-      </div>
-      <div class="footer-cta-row">
-        <a href="../assets/docs/menu-grupos-2026-summer.pdf" target="_blank" rel="noopener" aria-label="Menú para grupos">
-          <img src="../assets/images/button-group-menu.png" alt="Menú para grupos">
-        </a>
-        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" aria-label="Reservar mesa">
-          <img src="../assets/images/button-reservas.png" alt="Reservar mesa">
-        </a>
-      </div>
-    </div>
   </footer>
 
+  <!-- ── FOOTER BAR (legal / reviews) ── -->
   <div class="footer-bar">
+    <span class="footer-bar-copy">© 2026 Makamaka Beach Burger Café</span>
     <a href="../legal/index.html" class="footer-bar-link">Cookies &amp; Legal</a>
     <a href="https://maps.app.goo.gl/va5jCDSNcbdHHJvQ6" target="_blank" rel="noopener" class="footer-bar-link">Google Reviews</a>
     <a href="https://www.tripadvisor.es/Search?q=Makamaka%20Beach%20Burger%20Cafe%20Barcelona" target="_blank" rel="noopener" class="footer-bar-link">TripAdvisor</a>
-    <a href="../maka-friends/index.html" class="footer-bar-link">Maka Friends</a>
   </div>
 
   <!-- ── VIDEO POPUP ── -->

@@ -78,9 +78,6 @@
   <link rel="preload" href="assets/fonts/itc-avant-garde-gothic-bold-condensed.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/itc-avant-garde-gothic-bold.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Cormorant Garamond (gallery text) -->
-  <link rel="stylesheet" href="assets/fonts/cormorant-garamond.css">
-
   <!-- Swiper v8 CSS -->
   <link rel="stylesheet" href="assets/vendor/swiper/swiper.min.css">
 
@@ -122,17 +119,18 @@
     <div class="header-inner">
       <div class="header-left">
         <a href="./" class="header-logo-link" aria-label="Makamaka Beach Burger Café – Inicio">
-          <img src="assets/images/logo-white.png" alt="Makamaka Beach Burger Café" class="invert">
-        </a>
-        <a href="menu/menu-5/" class="header-nav-btn desktop-only" aria-label="Ver carta / menú">
-          <img src="assets/images/button-menu.png" alt="Ver carta / menú">
-        </a>
-        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="header-nav-btn desktop-only" aria-label="Reservar mesa">
-          <img src="assets/images/button-reservas.png" alt="Reservar mesa">
+          <img src="assets/images/logo-white.png" alt="Makamaka Beach Burger Café">
         </a>
       </div>
+      <nav class="header-nav desktop-only" aria-label="Navegación principal">
+        <a href="menu/menu-5/" class="header-nav-btn">Carta</a>
+        <a href="#grupos" class="header-nav-btn">Grupos</a>
+        <a href="maka-friends/index.html" class="header-nav-btn">Maka Friends</a>
+        <a href="https://maps.app.goo.gl/va5jCDSNcbdHHJvQ6" target="_blank" rel="noopener" class="header-nav-btn">Dónde Estamos</a>
+        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="header-nav-btn is-primary">Reservar</a>
+      </nav>
       <a href="#" id="open-menu" class="hamburger-btn" aria-label="Abrir menú" aria-controls="off-canvas-menu" aria-expanded="false">
-        <img src="assets/images/icon-hamburger-menu.png" alt="" class="invert">
+        <span></span><span></span><span></span>
       </a>
     </div>
   </header>
@@ -147,27 +145,19 @@
         </svg>
       </button>
 
-      <a href="#menu" class="off-canvas-item">
-        <img src="assets/images/icon-menu.png" alt="Menú" class="menu-anim">
-      </a>
-      <a href="juego/index.html" class="off-canvas-item other-item">
-        <img src="assets/images/icon-friends.png" alt="Friends & Events">
-      </a>
-      <a href="#" class="off-canvas-item where-item">
-        <img src="assets/images/icon-where.png" alt="Dónde estamos" class="where-anim">
-      </a>
-      <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener" class="off-canvas-item other-item">
-        <img src="assets/images/icon-family.png" alt="Únete a la familia">
-      </a>
-      <a href="#" id="open-video" class="off-canvas-item other-item">
-        <img src="assets/images/icon-camera.png" alt="Ver vídeo">
-      </a>
+      <nav class="off-canvas-nav" aria-label="Menú principal">
+        <a href="menu/menu-5/" class="off-canvas-link">Carta</a>
+        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="off-canvas-link">Reservar</a>
+        <a href="#grupos" class="off-canvas-link">Grupos</a>
+        <a href="maka-friends/index.html" class="off-canvas-link">Maka Friends</a>
+        <a href="https://maps.app.goo.gl/va5jCDSNcbdHHJvQ6" target="_blank" rel="noopener" class="off-canvas-link">Dónde Estamos</a>
+      </nav>
 
       <nav class="off-canvas-textlinks" aria-label="Más secciones">
-        <a href="#grupos" class="off-canvas-textlink">Grupos</a>
-        <a href="maka-friends/index.html" class="off-canvas-textlink">Maka Friends</a>
-        <a href="maka-friends/index.html#blog" class="off-canvas-textlink">Blog</a>
         <a href="institucional/index.html" class="off-canvas-textlink">Institucional</a>
+        <a href="juego/index.html" class="off-canvas-textlink">Jugar</a>
+        <a href="#" id="open-video" class="off-canvas-textlink">Ver vídeo</a>
+        <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener" class="off-canvas-textlink">Únete al equipo</a>
         <a href="https://glovoapp.com/es/es/barcelona/" target="_blank" rel="noopener" class="off-canvas-textlink">Order Now</a>
         <span class="off-canvas-textlink is-disabled" aria-disabled="true">Shop (próximamente)</span>
       </nav>
@@ -179,16 +169,9 @@
 
     <!-- ── HERO ── -->
     <section class="section-hero" id="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
 
-      <!-- Buttons visible on tablet/mobile (header hides its own) -->
-      <div class="hero-mobile-btns">
-        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" aria-label="Reservar mesa">
-          <img src="assets/images/button-reservas.png" alt="Reservar mesa">
-        </a>
-        <a href="menu/menu-5/" aria-label="Ver carta / menú">
-          <img src="assets/images/button-menu.png" alt="Ver carta / menú">
-        </a>
-      </div>
+      <p class="hero-eyebrow">Barceloneta · Beach Bar &amp; Healthy Restaurant</p>
 
       <!-- Animated words -->
       <div class="words-grid" aria-label="Makamaka Beach Burger Cafe">
@@ -201,10 +184,22 @@
           <span class="word-item" data-bg="assets/images/hero-hover-cafe.gif" aria-label="cafe">cafe</span>
         </div>
       </div>
+
+      <p class="hero-subtitle">Protein burgers, healthy bowls y cócteles frente al mar, todo el año.</p>
+
+      <div class="hero-cta">
+        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" class="grupos-btn is-accent is-large" aria-label="Reservar mesa">Reservar mesa</a>
+        <a href="menu/menu-5/" class="grupos-btn is-ghost is-large" aria-label="Ver carta / menú">Ver carta</a>
+      </div>
     </section>
 
+    <!-- ── HERO BADGE (parallax) ── -->
+    <div class="hero-badge-wrap" aria-hidden="true">
+      <img src="assets/images/logo-mobile.png" alt="" class="hero-badge" id="hero-badge">
+    </div>
+
     <!-- ── MARQUEE: KEYWORDS / POSITIONING ── -->
-    <div class="marquee-strip tira-01" aria-hidden="true">
+    <div class="marquee-strip tira-01 marquee-after-hero" aria-hidden="true">
       <div class="marquee-container texto">
         <div class="marquee">
           <div class="marquee-content">HEALTHY RESTAURANT · BEACH BAR · TERRACE · PROTEIN BURGERS · HEALTHY BOWLS · SALADS · SMOOTHIES · COCKTAILS · TAKE AWAY · </div>
@@ -214,43 +209,51 @@
 
     <!-- ── ABOUT / INTRO ── -->
     <section class="section-intro" id="about" aria-label="Sobre Makamaka">
+      <p class="intro-eyebrow">Barceloneta · Est. 2012</p>
+      <p class="intro-lead">Barceloneta's beach life meeting point for active people who love real food, fresh drinks and an all-year-round summer vibe.</p>
       <p class="intro-text">
-        Welcome to Makamaka — Barceloneta's beach life meeting point for active people who love real food, fresh drinks and an all-year-round summer vibe. Located in the heart of Barceloneta, Makamaka is a vibrant beach bar and healthy restaurant serving mouthwatering protein burgers, fresh salads, healthy bowls, wraps, power smoothies and crafted cocktails inspired by the vibrant energy of Barcelona's beach culture.
-      </p>
-      <p class="intro-text">
-        Whether you stop by after the beach, a swim, surf session or run, for a quick take away bite, a long lunch with friends or sunset cocktails on the terrace with sea views, Makamaka combines relaxed beach energy, fresh ingredients, real hospitality and feel-good comfort food in one of Barcelona's most iconic seaside neighborhoods.
+        A vibrant beach bar and healthy restaurant serving protein burgers, fresh salads, healthy bowls, wraps, power smoothies and crafted cocktails — after the beach, for a quick bite, or sunset cocktails on the terrace with sea views.
       </p>
       <p class="intro-tagline">An all-day sunshine getaway for locals, travelers, surfers, runners, creatives &amp; beach lovers.</p>
     </section>
 
     <!-- ── OUR STORY / MISSION / HABIT ── -->
     <section class="section-story" id="our-story" aria-label="Our Story">
-      <div class="story-block">
-        <h2 class="story-heading">Our Story</h2>
-        <p class="story-text">
-          Makamaka Beach Burger Café was born in Barceloneta in 2012, but the friendship among its creators goes further back. First there was Andrea, a familiar face in the international cocktail scene. Then there was Steef, a seasoned architect and conceptual madman. The two started off as housemates in Amsterdam, where they became fast friends. When Andrea got the chance to open his own place in Barcelona, he didn't forget his promise to involve his friend — the duo teamed up with a crew of Dutch guys who share the same passion for good food, great people and girls on rollerskates.
-        </p>
-        <p class="story-text">
-          The love child of it all was dubbed "Makamaka", a name given to Andrea by Steef. In Hawaiian it means <em>intimate friend</em> — which is really how it all started. To this day, Makamaka serves as a 70's-inspired watering hole for locals and travelers alike to share burgers, cocktails and plenty of besos.
-        </p>
+      <div class="story-block story-editorial">
+        <div class="story-editorial-head">
+          <p class="story-eyebrow">Since 2012</p>
+          <h2 class="story-heading">Our Story</h2>
+        </div>
+        <div class="story-editorial-body">
+          <p class="story-text">
+            Makamaka was born in Barceloneta in 2012, out of a friendship that started years earlier in Amsterdam — between Andrea, a familiar face in the international cocktail scene, and Steef, a seasoned architect and conceptual madman. When Andrea got the chance to open his own place in Barcelona, he brought Steef in, together with a crew of Dutch friends who shared the same love for good food, great people and girls on rollerskates.
+          </p>
+          <blockquote class="story-pullquote">&ldquo;Makamaka.&rdquo; In Hawaiian, intimate friend.</blockquote>
+          <p class="story-text">
+            It's really how it all started — and to this day, Makamaka serves as a 70's-inspired watering hole for locals and travelers alike to share burgers, cocktails and plenty of besos.
+          </p>
+        </div>
       </div>
 
       <div class="story-block story-mission">
         <h2 class="story-heading">The Makamaka Mission</h2>
         <p class="story-tagline">Tasty vibes. Happy burgers. Saucy rollergirls.</p>
         <p class="story-text">
-          Makamaka is fueled by smiles, friendship &amp; good vibes. We try to get people's teeth out through every aspect of what we do, from the products we serve to the family that hosts our guests. We are burger-lovers who believe in the little details, and that every smile helps make a happier planet.
+          Fueled by smiles, friendship &amp; good vibes — we chase the little details, from the products we serve to the family that hosts our guests, because every smile helps make a happier planet.
         </p>
       </div>
 
-      <div class="story-habit">
-        <h2 class="story-heading">Makamaka HABIT</h2>
-        <ul class="habit-grid">
-          <li><strong>Hungry</strong><span>We are proactive, and very eager to learn &amp; innovate.</span></li>
-          <li><strong>Authentic</strong><span>We like to keep it real, pure &amp; fresh.</span></li>
-          <li><strong>Bliss</strong><span>We are energetic and entertaining, and truly enjoy our work.</span></li>
-          <li><strong>Impeccable</strong><span>We are clean, consistent &amp; effective.</span></li>
-          <li><strong>Touch</strong><span>We connect and make new friends every day.</span></li>
+      <div class="story-block story-editorial story-habit">
+        <div class="story-editorial-head">
+          <p class="story-eyebrow">The Makamaka Way</p>
+          <h2 class="story-heading">Makamaka HABIT</h2>
+        </div>
+        <ul class="habit-list">
+          <li><span class="habit-index">01</span><div class="habit-copy"><strong>Hungry</strong><span>We are proactive, and very eager to learn &amp; innovate.</span></div></li>
+          <li><span class="habit-index">02</span><div class="habit-copy"><strong>Authentic</strong><span>We like to keep it real, pure &amp; fresh.</span></div></li>
+          <li><span class="habit-index">03</span><div class="habit-copy"><strong>Bliss</strong><span>We are energetic and entertaining, and truly enjoy our work.</span></div></li>
+          <li><span class="habit-index">04</span><div class="habit-copy"><strong>Impeccable</strong><span>We are clean, consistent &amp; effective.</span></div></li>
+          <li><span class="habit-index">05</span><div class="habit-copy"><strong>Touch</strong><span>We connect and make new friends every day.</span></div></li>
         </ul>
       </div>
     </section>
@@ -293,42 +296,44 @@
 
     <!-- ── OFERTAS DEL DÍA ── -->
     <section class="section-friends" id="ofertas" aria-label="Ofertas del día">
-      <h2 class="friends-heading">Ofertas según la hora, todo el día</h2>
-      <p class="grupos-text" style="max-width:640px; margin:-1.5rem auto 2rem;">
-        Esto es solo una muestra. ¿Ya sos <strong>Maka Friend</strong>? Sumá puntos en cada visita y desbloqueá recompensas todo el año → <a href="maka-friends/index.html" style="text-decoration:underline;">Conocé el programa completo</a>
-      </p>
+      <div class="ofertas-header">
+        <h2 class="friends-heading">Ofertas según la hora, todo el día</h2>
+        <p class="grupos-text ofertas-subtext">
+          Esto es solo una muestra. ¿Ya sos <strong>Maka Friend</strong>? Sumá puntos en cada visita y desbloqueá recompensas todo el año → <a href="maka-friends/index.html">Conocé el programa completo</a>
+        </p>
+      </div>
 
       <div id="zona-juego" class="zona-juego">
         <div id="contenedor-info" class="contenedor-info">
-          <ol class="lista-benefits">
-            <li>
-              Every morning until 13:30 h.<br>
-              <strong>POWER MORNINGS:</strong> I've got the Power or Malibu Wrap + Homemade Lemonade* 14,9€.<br>
-              <strong>FRESH START:</strong> Matcha Iced Latte 3,5€ y Açai Smoothie "Girl from Ipanema" 5,9€.
-            </li>
-            <li>
-              From 13:30 h. to 16:00 h.<br>
-              <strong>YOUR TRAIN BUDDIES:</strong> Greek Power Bowl + Homemade Lemonade* 15,9€.<br>
-              <strong>GO GREEN (or go home):</strong> Avocado Beast + 30g of Protein or Big Kahuna mojito 7€ (Virgin a 3,5€).
-            </li>
-            <li>
-              From 16:00 h. to 19:00 h.<br>
-              <strong>THE PERFECT THREESOME:</strong> Smash burger + fries + Homemade lemonade 14.90€.
-            </li>
-            <li>
-              From 19:00 h. to 21:00 h.<br>
-              <strong>BEACH RECOVERY:</strong> Michelada + Fresh Salmon Tostada o Alitas 9,5€.
-            </li>
-            <li>
-              From 19:00 h. till closing.<br>
-              <strong>POST WORKOUT FUEL:</strong> Free Protein or Creatine Scoop with any Smoothy.
-            </li>
-            <li>
-              From 21:00 h. till closing.<br>
-              <strong>COOL DOWN:</strong> Pinta 4€, Aperol Spritz 6€, Spicy Margarita 8€.
-            </li>
-          </ol>
-          <button id="btn-jugar" class="btn-jugar">JUGAR</button>
+          <div class="ofertas-grid">
+            <div class="oferta-card">
+              <span class="oferta-time">Hasta 13:30 h</span>
+              <p class="oferta-item"><span class="oferta-name">Power Mornings</span><span class="oferta-desc">I've got the Power o Malibu Wrap + Homemade Lemonade* — 14,9€.</span></p>
+              <p class="oferta-item"><span class="oferta-name">Fresh Start</span><span class="oferta-desc">Matcha Iced Latte 3,5€ y Açai Smoothie "Girl from Ipanema" 5,9€.</span></p>
+            </div>
+            <div class="oferta-card">
+              <span class="oferta-time">13:30 – 16:00 h</span>
+              <p class="oferta-item"><span class="oferta-name">Your Train Buddies</span><span class="oferta-desc">Greek Power Bowl + Homemade Lemonade* — 15,9€.</span></p>
+              <p class="oferta-item"><span class="oferta-name">Go Green (or go home)</span><span class="oferta-desc">Avocado Beast + 30g of Protein o Big Kahuna mojito — 7€ (virgin 3,5€).</span></p>
+            </div>
+            <div class="oferta-card">
+              <span class="oferta-time">16:00 – 19:00 h</span>
+              <p class="oferta-item"><span class="oferta-name">The Perfect Threesome</span><span class="oferta-desc">Smash burger + fries + Homemade lemonade — 14,90€.</span></p>
+            </div>
+            <div class="oferta-card">
+              <span class="oferta-time">19:00 – 21:00 h</span>
+              <p class="oferta-item"><span class="oferta-name">Beach Recovery</span><span class="oferta-desc">Michelada + Fresh Salmon Tostada o Alitas — 9,5€.</span></p>
+            </div>
+            <div class="oferta-card">
+              <span class="oferta-time">Desde 19:00 h</span>
+              <p class="oferta-item"><span class="oferta-name">Post Workout Fuel</span><span class="oferta-desc">Free Protein o Creatine Scoop con cualquier Smoothie.</span></p>
+            </div>
+            <div class="oferta-card">
+              <span class="oferta-time">Desde 21:00 h</span>
+              <p class="oferta-item"><span class="oferta-name">Cool Down</span><span class="oferta-desc">Pinta 4€, Aperol Spritz 6€, Spicy Margarita 8€.</span></p>
+            </div>
+          </div>
+          <button id="btn-jugar" class="btn-jugar">JUGAR Y GANÁ</button>
         </div>
 
         <div id="contenedor-juego" class="contenedor-juego">
@@ -339,9 +344,8 @@
     </section>
 
     <!-- ── CASSETTES MARQUEE ── -->
-    <div class="section-cassettes grab" aria-hidden="true">
-      <img src="assets/images/playlist-tag.png" class="playlist-tag desktop-only" alt="">
-      <div class="marquee-container imagenes">
+    <section class="section-cassettes" aria-label="Playlist Makamaka">
+      <div class="marquee-container imagenes" id="cassettes-row" aria-hidden="true">
         <div class="marquee">
           <img src="assets/images/cassette-5.png" class="cassette-img" alt="">
           <img src="assets/images/cassette-4.png" class="cassette-img" alt="">
@@ -349,7 +353,7 @@
           <img src="assets/images/cassette-2.png" class="cassette-img" alt="">
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- ── GALLERY ── -->
     <section class="section-gallery" id="menu" aria-label="Nuestra familia">
@@ -421,76 +425,60 @@
   <!-- ── FOOTER ── -->
   <footer class="site-footer" id="footer" role="contentinfo">
 
-    <!-- Logo -->
-    <div class="footer-logo-col">
-      <img src="assets/images/logo-mobile.png" alt="Makamaka Beach Burger Café" width="255" height="284">
-      <p class="footer-tagline">Healthy Restaurant · Beach Bar · Burgers · Bowls · Smoothies · Cocktails</p>
-    </div>
-
-    <!-- Where we are -->
-    <div class="footer-col">
-      <h2 class="footer-heading">WHERE WE ARE?</h2>
-      <address class="footer-address" style="font-style:normal;">
-        <strong>Pg. de Joan de Borbó 76,<br>08039 Barcelona</strong>
-      </address>
-      <p class="footer-hours">
-        <b>Lu-Ju:</b> 12:00 – 24:00h<br>
-        <b>Vi-Sab:</b> 12:00 – 1:00h<br>
-        <b>Dom:</b> 11:00 – 24:00h
-      </p>
-    </div>
-
-    <!-- Follow -->
-    <div class="footer-col">
-      <h2 class="footer-heading">FOLLOW</h2>
-      <div class="social-link">
-        <a href="https://www.facebook.com/MakamakaBcn" target="_blank" rel="noopener">
-          <img src="assets/images/icon-facebook.png" alt="Facebook" width="30"> Facebook
-        </a>
-      </div>
-      <div class="social-link">
-        <a href="https://www.instagram.com/makamakabcn/?hl=es" target="_blank" rel="noopener">
-          <img src="assets/images/icon-instagram.png" alt="Instagram" width="30"> Instagram
-        </a>
-      </div>
-      <div class="social-link">
-        <a href="https://www.pinterest.es/makamakabarcelona/" target="_blank" rel="noopener">
-          <img src="assets/images/icon-pinterest.png" alt="Pinterest" width="30"> Pinterest
-        </a>
-      </div>
-      <div class="social-link">
-        <a href="https://tiktok.com/@makamakabcn" target="_blank" rel="noopener">
-          <img src="assets/images/icon-tiktok.png" alt="TikTok" width="30"> Tiktok
-        </a>
-      </div>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-col">
-      <h2 class="footer-heading">CONTACT</h2>
-      <div class="contact-item">
-        <img src="assets/images/icon-mail.png" alt="" width="30"> hola@makamaka.es
-      </div>
-      <div class="contact-item">
-        <img src="assets/images/icon-phone.png" alt="" width="30"> +34 644 121 335
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="assets/images/logo-mobile.png" alt="Makamaka Beach Burger Café" class="footer-logo" width="255" height="284">
+        <p class="footer-tagline">Healthy Restaurant · Beach Bar · Burgers · Bowls · Smoothies · Cocktails</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/MakamakaBcn" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="assets/images/icon-facebook.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/makamakabcn/?hl=es" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/images/icon-instagram.png" alt="">
+          </a>
+          <a href="https://www.pinterest.es/makamakabarcelona/" target="_blank" rel="noopener" aria-label="Pinterest">
+            <img src="assets/images/icon-pinterest.png" alt="">
+          </a>
+          <a href="https://tiktok.com/@makamakabcn" target="_blank" rel="noopener" aria-label="TikTok">
+            <img src="assets/images/icon-tiktok.png" alt="">
+          </a>
+        </div>
       </div>
 
-      <div class="footer-cta-row">
-        <a href="assets/docs/menu-grupos-2026-summer.pdf" target="_blank" rel="noopener" aria-label="Menú para grupos">
-          <img src="assets/images/button-group-menu.png" alt="Menú para grupos">
-        </a>
-        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish" aria-label="Reservar mesa">
-          <img src="assets/images/button-reservas.png" alt="Reservar mesa">
-        </a>
+      <!-- Sitemap -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Sitio</h3>
+        <nav class="footer-links" aria-label="Enlaces del footer">
+          <a href="menu/menu-5/">Carta</a>
+          <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-makamaka/spanish">Reservas</a>
+          <a href="#grupos">Grupos &amp; Eventos</a>
+          <a href="maka-friends/index.html">Maka Friends</a>
+          <a href="institucional/index.html">Institucional</a>
+        </nav>
       </div>
 
-      <div class="footer-cta-row">
-        <a href="mailto:hola@makamaka.es?subject=Consulta%20de%20prensa" aria-label="Sala de prensa">
-          <img src="assets/images/button-press-room.png" alt="Sala de prensa">
-        </a>
-        <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener" aria-label="Únete al equipo">
-          <img src="assets/images/button-join-team.png" alt="Únete al equipo">
-        </a>
+      <!-- Visit -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Visitanos</h3>
+        <address class="footer-address">Pg. de Joan de Borbó 76,<br>08039 Barcelona</address>
+        <p class="footer-hours">
+          Lu-Ju: 12:00 – 24:00h<br>
+          Vi-Sab: 12:00 – 1:00h<br>
+          Dom: 11:00 – 24:00h
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Contacto</h3>
+        <a href="mailto:hola@makamaka.es" class="footer-contact-link">hola@makamaka.es</a>
+        <a href="tel:+34644121335" class="footer-contact-link">+34 644 121 335</a>
+        <nav class="footer-links" aria-label="Más enlaces">
+          <a href="assets/docs/menu-grupos-2026-summer.pdf" target="_blank" rel="noopener">Menú para grupos</a>
+          <a href="mailto:hola@makamaka.es?subject=Consulta%20de%20prensa">Sala de prensa</a>
+          <a href="https://form.typeform.com/to/Pw3wb1Cf" target="_blank" rel="noopener">Trabajá con nosotros</a>
+        </nav>
       </div>
     </div>
 
@@ -498,10 +486,10 @@
 
   <!-- ── FOOTER BAR (legal / reviews) ── -->
   <div class="footer-bar">
+    <span class="footer-bar-copy">© 2026 Makamaka Beach Burger Café</span>
     <a href="legal/index.html" class="footer-bar-link">Cookies &amp; Legal</a>
     <a href="https://maps.app.goo.gl/va5jCDSNcbdHHJvQ6" target="_blank" rel="noopener" class="footer-bar-link">Google Reviews</a>
     <a href="https://www.tripadvisor.es/Search?q=Makamaka%20Beach%20Burger%20Cafe%20Barcelona" target="_blank" rel="noopener" class="footer-bar-link">TripAdvisor</a>
-    <a href="institucional/index.html" class="footer-bar-link">Institucional</a>
   </div>
 
   <!-- ── VIDEO POPUP ── -->

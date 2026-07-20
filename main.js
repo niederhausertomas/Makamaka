@@ -96,19 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-/* ── 6. RANDOM BLINK ON OFF-CANVAS "OTHER" ITEMS ── */
-document.addEventListener('DOMContentLoaded', function () {
-  const others = document.querySelectorAll('.off-canvas .other-item');
-  if (!others.length) return;
-
-  setInterval(function () {
-    others.forEach(el => el.classList.remove('parpadeando'));
-    const random = others[Math.floor(Math.random() * others.length)];
-    random.classList.add('parpadeando');
-    setTimeout(function () { random.classList.remove('parpadeando'); }, 1000);
-  }, 2000);
-});
-
 /* ── 7. VIDEO POPUP ── */
 document.addEventListener('DOMContentLoaded', function () {
   const openVideoBtn  = document.getElementById('open-video');
@@ -143,23 +130,89 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* ── 8. HERO BACKGROUND CHANGE ON WORD HOVER ── */
 document.addEventListener('DOMContentLoaded', function () {
-  const hero = document.querySelector('.section-hero');
-  if (!hero) return;
-  const originalBg = window.getComputedStyle(hero).backgroundImage;
+  const heroBg = document.querySelector('.hero-bg');
+  if (!heroBg) return;
+  const originalBg = window.getComputedStyle(heroBg).backgroundImage;
 
   document.querySelectorAll('.word-item').forEach(function (span) {
     span.addEventListener('mouseenter', function () {
       const newBg = span.getAttribute('data-bg');
       if (newBg) {
-        hero.style.backgroundImage = 'url(' + newBg + ')';
-        hero.style.backgroundSize = 'cover';
-        hero.style.backgroundPosition = 'center';
+        heroBg.style.backgroundImage = 'url(' + newBg + ')';
       }
     });
     span.addEventListener('mouseleave', function () {
-      hero.style.backgroundImage = originalBg;
+      heroBg.style.backgroundImage = originalBg;
     });
   });
+});
+
+/* ── 8b. PARALLAX ON SCROLL (hero bg + hero badge + map) ──
+   Transforms are driven by scroll DELTA since page load (not by the
+   element's live rect), so they start at 0 and grow smoothly — using
+   the live rect as the basis instead causes a jump-cut on load for any
+   element whose natural resting position isn't near the top of the page. */
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const heroBg = document.querySelector('.hero-bg');
+  const heroBadge = document.getElementById('hero-badge');
+  const mapEl = document.querySelector('.section-map');
+  const cassettesRow = document.getElementById('cassettes-row');
+  if (!heroBg && !heroBadge && !mapEl && !cassettesRow) return;
+
+  const startY = window.scrollY || window.pageYOffset;
+  let ticking = false;
+
+  function apply() {
+    const vh = window.innerHeight;
+    const y = (window.scrollY || window.pageYOffset) - startY;
+
+    if (heroBg) {
+      const rect = heroBg.parentElement.getBoundingClientRect();
+      if (rect.bottom > -vh && rect.top < vh * 2) {
+        heroBg.style.transform = 'translateY(' + (y * 0.18) + 'px)';
+      }
+    }
+
+    if (heroBadge) {
+      const rect = heroBadge.parentElement.getBoundingClientRect();
+      if (rect.bottom > -vh && rect.top < vh * 2) {
+        heroBadge.style.transform = 'translateY(' + (y * -0.25) + 'px)';
+      }
+    }
+
+    if (mapEl) {
+      const rect = mapEl.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < vh) {
+        const offset = (rect.top - vh / 2) * 0.08;
+        mapEl.style.backgroundPosition = 'center calc(50% + ' + offset + 'px)';
+      }
+    }
+
+    if (cassettesRow) {
+      const rect = cassettesRow.parentElement.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < vh) {
+        // Large negative factor: the row moves at ~15% of normal scroll
+        // speed, so it appears to hold still while the short window
+        // (the section, clipped via overflow:hidden) scrolls past it,
+        // revealing different parts of the oversized cassette images.
+        const offset = (rect.top - vh / 2) * -0.85;
+        cassettesRow.style.transform = 'translateY(' + offset + 'px)';
+      }
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(apply);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  apply();
 });
 
 /* ── 9. MARQUEE ANIMATION (GSAP) ── */
